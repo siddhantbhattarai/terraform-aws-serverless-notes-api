@@ -3,6 +3,19 @@
 Project 04 deploys a production-style serverless CRUD API using API Gateway,
 Lambda, DynamoDB, least-privilege IAM, and CloudWatch Logs.
 
+## Problem this solves
+
+Teams often need a small API without provisioning, patching, scaling, or paying
+for always-on servers. This project provides a durable notes service that scales
+with requests, persists data safely, and exposes logs for troubleshooting.
+
+## When to use this architecture
+
+Use it for event-driven or request-driven APIs with unpredictable traffic,
+internal tools, prototypes, mobile backends, and lightweight CRUD services. It
+is less suitable for long-running requests, WebSockets, or workloads that need
+persistent in-memory connections.
+
 ## Architecture
 
 ![Serverless Notes API architecture](diagrams/architecture.svg)
