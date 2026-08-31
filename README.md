@@ -53,6 +53,19 @@ terraform plan
 terraform apply
 ```
 
+## Local Floci plan check
+
+AWS is the default deployment target. To test Terraform's resource graph
+locally without creating anything, run:
+
+```bash
+terraform init -backend=false
+terraform validate
+terraform plan -var=use_floci=true
+```
+
+Set `use_floci=false` (the default) before planning or applying to AWS.
+
 ## Verify
 
 ```bash
